@@ -1,90 +1,93 @@
-🗣️ Assamese GPT
+<h1 align="center">🌐 Assamese.GPT - AI Translator and Chatbot for Assamese Language</h1>
 
-📜 Overview
-Assamese GPT is an AI-based chatbot and translator that understands input in English (or other languages) and responds fluently in Assamese.
+<p align="center">
+  <img src="https://img.shields.io/github/languages/top/roshan-poudhyal/assamese.gpt?color=blue&style=flat-square" />
+  <img src="https://img.shields.io/github/repo-size/roshan-poudhyal/assamese.gpt?style=flat-square" />
+  <img src="https://img.shields.io/github/last-commit/roshan-poudhyal/assamese.gpt?style=flat-square" />
+  <img src="https://img.shields.io/github/issues/roshan-poudhyal/assamese.gpt?style=flat-square" />
+</p>
 
-The goal is to build a natural language model fine-tuned for Assamese language generation, supporting tasks like translation, chatting, answering questions, and localizing AI interactions.
+<p align="center">
+  <img src="https://github.com/roshan-poudhyal/assamese.gpt/assets/assamese-gpt-banner.gif" alt="Assamese GPT" height="300"/>
+</p>
 
-✨ Features
-✅ Translation from English (or other languages) into Assamese
+---
 
-✅ Conversational responses purely in Assamese
+## 🧠 About the Project
 
-✅ Easy to extend with custom Assamese datasets
+**Assamese.GPT** is an open-source project aimed at bridging the language barrier by creating an **AI-based Assamese language translator and chatbot**.
 
-✅ Support for fine-tuning and model improvement
+It helps in:
+- Translating English (or Hindi, etc.) text into **Assamese**.
+- Allowing users to **chat directly in Assamese**.
+- Preserving linguistic diversity through AI and natural language processing.
 
-🛠️ Tech Stack
-Language: Python 3.x
+This project brings **Large Language Model (LLM)** capabilities to the Assamese community in an accessible and scalable way.
 
-Libraries:
+---
 
-transformers (HuggingFace)
+## 🌟 Features
 
-datasets
+- 🌎 Translate English/Hindi/Other languages into **Assamese**.
+- 💬 Conversational AI chatbot in Assamese.
+- 🤖 Fine-tuned models for better regional dialect understanding.
+- ⚡ Fast, lightweight, and scalable APIs.
+- 🛠️ Easy integration into websites, apps, and educational platforms.
+- 📚 Promotes Assamese language usage in AI applications.
 
-torch (PyTorch)
+---
 
-Model Base:
-(can be customized) — starting from pretrained models like mBERT, XLM-Roberta, or T5 multilingual
+## 🧰 Tech Stack
 
-🚀 How to Run Locally
-Clone the repository:
+| Category         | Tools / Libraries Used                      |
+|------------------|----------------------------------------------|
+| 🧠 AI/ML         | Hugging Face Transformers, SentencePiece, Tokenizers |
+| 🐍 Backend       | Python (FastAPI / Flask API)                 |
+| 📦 Deployment    | GitHub, Hugging Face Spaces                  |
+| 🔠 Language Models | mBERT, XLM-Roberta, T5, or fine-tuned GPT models |
+| 📂 Preprocessing | Byte Pair Encoding (BPE), WordPiece          |
 
-bash
-Copy
-Edit
+---
+
+## 📈 How it Works
+
+1. 🔤 **Input text** in any language (e.g., English or Hindi).
+2. 🔄 **Tokenizer** breaks the sentence into manageable subwords.
+3. 🧠 **Model inference** predicts the Assamese translation or chatbot response.
+4. 🖼 **Output** in Assamese script (`অসমীয়া`).
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+# Clone the repository
 git clone https://github.com/roshan-poudhyal/assamese.gpt.git
 cd assamese.gpt
-Install required dependencies:
 
-bash
-Copy
-Edit
+# Create a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
-Run the main script:
 
-bash
-Copy
-Edit
-python app.py
-Usage:
+# Run the FastAPI server (example)
+uvicorn app:app --reload
 
-Input a sentence in English or another language
 
-Receive the output in Assamese language
 
-📈 Project Structure
-bash
-Copy
-Edit
 assamese.gpt/
 │
-├── model/              # Model checkpoints (after fine-tuning)
-├── data/               # Assamese datasets
-├── app.py              # Main application script
-├── README.md           # Project documentation
-└── requirements.txt    # Python dependencies
-🧠 Core Concepts
-Sequence-to-Sequence Translation
-
-Fine-tuning pre-trained LLMs for Assamese
-
-Text Generation and Localization
-
-Tokenization and Post-processing
-
-🎯 Future Roadmap
-Train on larger Assamese parallel corpus
-
-Add speech-to-text (input voice, reply in Assamese)
-
-Deploy as an Assamese Chatbot on Web or Mobile
-
-Open API for Assamese Language Processing
-
-Optimize model for low-resource devices
-
-🌍 Why Assamese GPT?
-Assamese is a rich, vibrant language but underrepresented in mainstream AI models.
-With Assamese GPT, we aim to empower AI applications for over 15 million Assamese speakers and preserve linguistic diversity.
+├── app.py                      # FastAPI or Flask app
+├── tokenizer/                  # Tokenization scripts and configs
+│   ├── sentencepiece_model.model
+│   └── bpe_vocab.txt
+│
+├── models/                     # Fine-tuned AI models (e.g., TFLite, PyTorch)
+│   ├── assamese_translation_model.pt
+│   └── assamese_chatbot_model.pt
+│
+├── utils/                      # Helper scripts for preprocessing, inference
+├── requirements.txt
+└── README.md
